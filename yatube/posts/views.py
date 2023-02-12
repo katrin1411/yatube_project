@@ -1,14 +1,13 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django .template import loader
 
 
 def index(request):
-    return HttpResponse('Главная страница')
+    template = loader.get_template('posts/index.html')
+    return HttpResponse(template.render({}, request))
 
 
 def group_posts(request, slug):
     return HttpResponse('Список мороженого')
 
-
-#def ice_cream_detail(request, pk):
-#    return HttpResponse(f'Мороженое номер {pk}')
