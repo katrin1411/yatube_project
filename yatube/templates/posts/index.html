@@ -14,7 +14,7 @@
     <meta name="theme-color" content="#ffffff">
     <!-- Подключен файл со стандартными стилями бустрап -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <title>Последние обновления на сайте</title>
+    <title>{{ title }}</title>
   </head>
   <body>
     <header>
@@ -34,7 +34,7 @@
       {% block content %}
       <!-- класс py-5 создает отступы сверху и снизу блока -->
       <div class="container py-5">     
-        <h1>Последние обновления на сайте</h1>
+        <h1>{{ text }}</h1>
         <article>
           <ul>
             <li>
@@ -52,7 +52,7 @@
             и Бабарыкинымъ, ругалъ Сержпутовскому и ничего не сдѣлалъ, вотъ 3 упрека, которыя дѣлаю с
             ебѣ за нынѣшній день. (3)
           </p>
-          <a href="group_list.html">все записи группы</a>
+          <a href="{% url 'group_list' %}">все записи группы</a>
         </article>
         <hr>
         <article>
