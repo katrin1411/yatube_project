@@ -19,6 +19,7 @@ class Post(models.Model):
         null=True,
     )
 
+
 class Group(models.Model):
     title = models.CharField(max_length=255, verbose_name='Заголовок')
     slug = models.SlugField(max_length=255, unique=True, verbose_name='URL', db_index=True)
